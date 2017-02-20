@@ -1,0 +1,55 @@
+  @import './reset.scss';
+  #accordion {
+    .panel{
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      margin-bottom: -5px;
+    }
+    .panel-heading{
+      padding: 0;
+      border-radius: 0;
+      border: none;
+      text-align: center;
+    }
+    //title的样式
+    .panel-title a{
+      display: block;
+      padding: 25px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: #333;
+      border-bottom: 1px solid #4a4a4a;
+      position: relative;
+      transition: all 0.5s ease 0s;
+      &:hover{
+        background: #4a4a4a;
+      }
+      //左边"+"图标样式
+      &:after{
+        content: "\f067";
+        font-family: FontAwesome;
+        font-size: 15px;
+        font-weight: 200;
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        transform: rotate(135deg);
+        transition: all 0.5s ease 0s;
+      }
+      &.collapsed:after{
+        @extend a:after;
+        transform: rotate(0deg);
+      }
+    }
+    .panel-body {
+      font-size: 14px;
+      color: #000;
+      line-height: 25px;
+      background-color: #eee;
+      padding: 30px;
+      margin: 0;
+    }
+  }
+  

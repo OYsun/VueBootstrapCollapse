@@ -1,0 +1,13 @@
+
+    @mixin Astyle{
+      text-decoration: none;
+		  outline: none;
+    }
+    a{
+      &:hover{
+        @include Astyle;
+      }
+      &:focus{
+        @include Astyle;
+      }
+    }
